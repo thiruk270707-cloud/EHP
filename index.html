@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f43f5e">
-  <title>MomCare — Next-Gen Emergency Medical Support Platform</title>
+  <title>CarePulse — Next-Gen Public Emergency Response Platform</title>
 
   <!-- Premium Typography: Syne (Ultra Display) + Plus Jakarta Sans (UI) + Space Grotesk (Data/Numbers) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -180,8 +180,8 @@
         <div class="w-22 h-22 bg-gradient-to-tr from-rose-600 via-pink-600 to-rose-400 rounded-3xl mx-auto flex items-center justify-center text-white shadow-2xl shadow-rose-600/50 mb-5 transform hover:rotate-6 hover:scale-105 transition-all duration-300 border border-white/20">
           <i class="fa-solid fa-heart-pulse text-4xl animate-heartbeat"></i>
         </div>
-        <h1 class="font-display text-4xl sm:text-5xl font-black tracking-tight text-white">MomCare</h1>
-        <p class="text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-rose-400 mt-2">Emergency Response Systems</p>
+        <h1 class="font-display text-4xl sm:text-5xl font-black tracking-tight text-white">CarePulse</h1>
+        <p class="text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-rose-400 mt-2">Public Emergency Response Network</p>
       </div>
 
       <!-- Login Form -->
@@ -209,8 +209,8 @@
       <!-- Register Form -->
       <form id="registerForm" class="space-y-4 hidden">
         <div>
-          <label class="block text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Mother's Full Name</label>
-          <input id="regName" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-800 rounded-2xl text-sm font-medium text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 transition-all">
+          <label class="block text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Full Name</label>
+          <input id="regName" required placeholder="e.g. Alex Morgan" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-800 rounded-2xl text-sm font-medium text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 transition-all">
         </div>
         <div>
           <label class="block text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Username</label>
@@ -221,21 +221,21 @@
           <input id="regPassword" type="password" required placeholder="Choose password" class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-800 rounded-2xl text-sm font-medium text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 transition-all">
         </div>
         <div>
-          <label class="block text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Expected Delivery Date</label>
-          <input id="regDueDate" type="date" required class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-800 rounded-2xl text-sm font-medium text-slate-300 focus:outline-none focus:border-rose-500 transition-all">
+          <label class="block text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Date of Birth</label>
+          <input id="regDob" type="date" required class="w-full px-4 py-3.5 bg-slate-900/90 border border-slate-800 rounded-2xl text-sm font-medium text-slate-300 focus:outline-none focus:border-rose-500 transition-all">
         </div>
         <button class="w-full py-4.5 shimmer-btn hover:opacity-90 text-white font-mono font-extrabold text-sm rounded-2xl shadow-2xl shadow-rose-600/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-2 tracking-wider">
-          <span>CREATE PATIENT PROFILE</span>
+          <span>CREATE EMERGENCY PROFILE</span>
           <i class="fa-solid fa-user-plus text-xs"></i>
         </button>
       </form>
 
       <!-- Toggle Links -->
       <div id="loginSwitch" class="text-center mt-7 text-xs text-slate-400 font-medium">
-        First time here? <a href="#" onclick="showRegister();return false" class="text-rose-400 font-bold hover:text-rose-300 underline underline-offset-4">Create Patient Account</a>
+        First time here? <a href="#" onclick="showRegister();return false" class="text-rose-400 font-bold hover:text-rose-300 underline underline-offset-4">Create Account</a>
       </div>
       <div id="registerSwitch" class="text-center mt-7 text-xs text-slate-400 font-medium hidden">
-        Registered patient? <a href="#" onclick="showLogin();return false" class="text-rose-400 font-bold hover:text-rose-300 underline underline-offset-4">Access Dashboard</a>
+        Registered user? <a href="#" onclick="showLogin();return false" class="text-rose-400 font-bold hover:text-rose-300 underline underline-offset-4">Access Dashboard</a>
       </div>
     </div>
   </section>
@@ -251,9 +251,9 @@
             <i class="fa-solid fa-heart-pulse text-2xl animate-heartbeat"></i>
           </div>
           <div>
-            <span class="font-display font-black text-2xl sm:text-3xl text-white tracking-tight block">MomCare</span>
+            <span class="font-display font-black text-2xl sm:text-3xl text-white tracking-tight block">CarePulse</span>
             <span class="text-[10px] font-mono font-bold tracking-[0.2em] text-rose-400 uppercase flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span> Live Dispatch Active
+              <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span> Live Emergency Link Active
             </span>
           </div>
         </div>
@@ -271,8 +271,8 @@
       <!-- Welcome Header Card -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 class="font-display text-4xl sm:text-5xl font-black text-white tracking-tight">Welcome, <span id="userName" class="text-gradient-gold">Mom</span></h2>
-          <p class="text-slate-400 text-sm mt-1">Real-time emergency distress beacon & continuous patient telemetry</p>
+          <h2 class="font-display text-4xl sm:text-5xl font-black text-white tracking-tight">Welcome, <span id="userName" class="text-gradient-gold">User</span></h2>
+          <p class="text-slate-400 text-sm mt-1">Real-time public distress beacon & personal medical telemetry</p>
         </div>
         <div class="self-start sm:self-auto inline-flex items-center gap-3 px-5 py-2.5 luxury-glass rounded-full border border-emerald-500/40 text-emerald-400 text-xs font-mono font-bold shadow-xl shadow-emerald-500/10">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
@@ -287,15 +287,15 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
           <div class="lg:col-span-7 space-y-6">
             <span class="inline-flex items-center gap-2.5 px-4 py-1.5 bg-rose-500/20 border border-rose-500/40 rounded-full text-rose-300 text-xs font-mono font-bold uppercase tracking-wider">
-              <i class="fa-solid fa-triangle-exclamation text-amber-400 animate-bounce"></i> Immediate Distress Trigger
+              <i class="fa-solid fa-triangle-exclamation text-amber-400 animate-bounce"></i> Immediate Emergency Trigger
             </span>
-            <h3 class="font-display text-3xl sm:text-5xl font-black text-white leading-tight">Emergency Assistance Needed?</h3>
+            <h3 class="font-display text-3xl sm:text-5xl font-black text-white leading-tight">Need Urgent Emergency Help?</h3>
             <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Activating the central SOS beacon broadcasts your live GPS coordinates, pregnancy medical profile, and automated distress payloads to nearby emergency care teams[cite: 1].
+              Activating the central SOS beacon broadcasts your live GPS location, essential medical profile, and automated distress payload to emergency contacts and response teams.
             </p>
             <div class="p-4 bg-amber-500/10 border border-amber-500/20 rounded-2xl flex items-start gap-3.5 text-xs text-amber-200/90 leading-relaxed">
               <i class="fa-solid fa-shield-halved text-amber-400 text-lg shrink-0 mt-0.5"></i>
-              <span><strong>Medical Safety Alert:</strong> For immediate critical life threats, dial standard national emergency numbers (112 / 102) directly. MomCare acts as a rapid primary dispatch aid[cite: 1].</span>
+              <span><strong>Medical Safety Alert:</strong> For immediate critical life threats, dial official national emergency numbers (112 / 102 / 911) directly. CarePulse acts as a rapid primary response dispatch system.</span>
             </div>
           </div>
 
@@ -318,7 +318,7 @@
       <!-- DASHBOARD WIDGETS GRID -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        <!-- Left Column: GPS Location Radar & Contraction Timer -->
+        <!-- Left Column: GPS Location Radar & Incident Stopwatch -->
         <div class="lg:col-span-7 space-y-8">
           
           <!-- GPS Location Radar -->
@@ -354,7 +354,7 @@
             </div>
           </div>
 
-          <!-- Contraction Duration Tracker -->
+          <!-- Medical Emergency Event Timer -->
           <div class="luxury-glass rounded-[2rem] p-6 sm:p-8 space-y-6">
             <div class="flex items-center justify-between border-b border-slate-800 pb-5">
               <div class="flex items-center gap-3.5">
@@ -362,16 +362,16 @@
                   <i class="fa-solid fa-stopwatch text-2xl"></i>
                 </div>
                 <div>
-                  <h3 class="font-display font-bold text-xl text-white">Labor Telemetry Tracker</h3>
-                  <p class="text-xs text-slate-400">Monitor duration & interval frequency</p>
+                  <h3 class="font-display font-bold text-xl text-white">Emergency Response Stopwatch</h3>
+                  <p class="text-xs text-slate-400">Time medical symptoms or response intervals</p>
                 </div>
               </div>
-              <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Interval Metrics</span>
+              <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Telemetry Timer</span>
             </div>
 
             <div class="text-center py-8 bg-slate-900/80 rounded-2xl border border-slate-800/80 relative overflow-hidden">
               <div id="timerDisplay" class="font-mono font-bold text-6xl tracking-tight text-gradient-gold">00:00</div>
-              <p class="text-xs font-mono text-slate-400 font-bold uppercase tracking-wider mt-4">Recorded Contractions: <strong id="contractionCount" class="text-rose-400 font-black text-lg">0</strong></p>
+              <p class="text-xs font-mono text-slate-400 font-bold uppercase tracking-wider mt-4">Recorded Intervals: <strong id="contractionCount" class="text-rose-400 font-black text-lg">0</strong></p>
             </div>
 
             <div class="grid grid-cols-3 gap-3">
@@ -388,7 +388,7 @@
           </div>
         </div>
 
-        <!-- Right Column: Medical Profile Telemetry & One-Tap Actions -->
+        <!-- Right Column: Personal Medical Profile Telemetry & One-Tap Actions -->
         <div class="lg:col-span-5 space-y-8">
           
           <!-- Medical Vitals Telemetry Card -->
@@ -399,8 +399,8 @@
                   <i class="fa-solid fa-notes-medical text-2xl"></i>
                 </div>
                 <div>
-                  <h3 class="font-display font-bold text-xl text-white">Patient Vitals</h3>
-                  <p class="text-xs text-slate-400">Pregnancy medical profile</p>
+                  <h3 class="font-display font-bold text-xl text-white">User Health Vitals</h3>
+                  <p class="text-xs text-slate-400">Emergency medical profile</p>
                 </div>
               </div>
               <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Medical Data</span>
@@ -408,27 +408,27 @@
 
             <div class="grid grid-cols-2 gap-3.5 text-xs">
               <div class="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
-                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Expected Due Date</span>
-                <strong id="dueDateDisplay" class="text-sm font-mono text-white font-black">—</strong>
+                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Date of Birth</span>
+                <strong id="dobDisplay" class="text-sm font-mono text-white font-black">—</strong>
               </div>
               <div class="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
-                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Current Gestation</span>
-                <strong id="pregnancyWeek" class="text-sm font-mono text-rose-400 font-black">—</strong>
+                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Age</span>
+                <strong id="userAge" class="text-sm font-mono text-rose-400 font-black">—</strong>
               </div>
               <div class="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
                 <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Blood Group</span>
                 <strong id="bloodType" class="text-sm font-mono text-white font-bold">Not set</strong>
               </div>
               <div class="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
-                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Allergies</span>
+                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Medical Conditions / Allergies</span>
                 <strong id="allergies" class="text-sm font-mono text-white font-bold truncate block">None</strong>
               </div>
               <div class="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
-                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Doctor</span>
+                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Primary Physician</span>
                 <strong id="doctorName" class="text-sm font-mono text-white font-bold truncate block">Not set</strong>
               </div>
               <div class="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl">
-                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Doctor Phone</span>
+                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">Physician Phone</span>
                 <strong id="doctorPhone" class="text-sm font-mono text-white font-bold truncate block">Not set</strong>
               </div>
             </div>
@@ -452,18 +452,18 @@
                 </div>
                 <div>
                   <h3 class="font-display font-bold text-xl text-white">Direct Speed Dial</h3>
-                  <p class="text-xs text-slate-400">One-tap priority line dispatch</p>
+                  <p class="text-xs text-slate-400">One-tap priority dispatch lines</p>
                 </div>
               </div>
               <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Priority</span>
             </div>
 
             <div class="grid grid-cols-2 gap-3.5">
-              <button onclick="callContact('husband')" class="p-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-left transition-all flex items-center gap-3.5 group">
-                <div class="w-11 h-11 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xl shrink-0 group-hover:scale-110 transition-transform">👨</div>
+              <button onclick="callContact('primary')" class="p-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-left transition-all flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold text-xl shrink-0 group-hover:scale-110 transition-transform">👤</div>
                 <div class="overflow-hidden">
-                  <div class="font-bold text-xs text-white truncate">Family</div>
-                  <div class="text-[10px] text-slate-400 font-medium">Primary Contact</div>
+                  <div class="font-bold text-xs text-white truncate">Emergency Contact</div>
+                  <div class="text-[10px] text-slate-400 font-medium">Primary</div>
                 </div>
               </button>
 
@@ -486,8 +486,8 @@
               <button onclick="callContact('family')" class="p-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-left transition-all flex items-center gap-3.5 group">
                 <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 group-hover:scale-110 transition-transform">👨‍👩‍👧</div>
                 <div class="overflow-hidden">
-                  <div class="font-bold text-xs text-white truncate">Backup</div>
-                  <div class="text-[10px] text-slate-400 font-medium">Secondary Contact</div>
+                  <div class="font-bold text-xs text-white truncate">Backup Contact</div>
+                  <div class="text-[10px] text-slate-400 font-medium">Secondary</div>
                 </div>
               </button>
             </div>
@@ -544,7 +544,7 @@
 
       <div class="space-y-3.5 bg-slate-900/90 p-5 rounded-2xl border border-slate-800 text-xs">
         <div>
-          <span class="text-slate-400 font-mono font-bold uppercase tracking-wider block mb-1">Patient Name</span>
+          <span class="text-slate-400 font-mono font-bold uppercase tracking-wider block mb-1">User Name</span>
           <span id="alertPatient" class="text-sm font-bold text-white">—</span>
         </div>
         <div>
@@ -574,8 +574,8 @@
 
   <!-- APPLICATION LOGIC JavaScript -->
   <script>
-    let users = JSON.parse(localStorage.getItem('momcare_users') || '[]');
-    let currentUser = JSON.parse(localStorage.getItem('momcare_current') || 'null');
+    let users = JSON.parse(localStorage.getItem('carepulse_users') || '[]');
+    let currentUser = JSON.parse(localStorage.getItem('carepulse_current') || 'null');
     let locationData = null, timerInterval = null, seconds = 0, contractionCount = 0;
 
     const $ = id => document.getElementById(id);
@@ -611,7 +611,7 @@
       const user = users.find(x => x.username === u && x.password === p);
       if (!user) return toast('Invalid username or password');
       currentUser = user;
-      localStorage.setItem('momcare_current', JSON.stringify(user));
+      localStorage.setItem('carepulse_current', JSON.stringify(user));
       showApp();
     });
 
@@ -621,34 +621,37 @@
         name: $('regName').value.trim(),
         username: $('regUsername').value.trim(),
         password: $('regPassword').value,
-        dueDate: $('regDueDate').value,
+        dob: $('regDob').value,
         bloodType: 'Not set',
         allergies: 'None',
         doctorName: 'Not set',
         doctorPhone: '',
-        husbandPhone: '',
+        primaryPhone: '',
         familyPhone: ''
       };
       if (users.some(x => x.username === user.username)) return toast('Username already exists');
       users.push(user);
-      localStorage.setItem('momcare_users', JSON.stringify(users));
+      localStorage.setItem('carepulse_users', JSON.stringify(users));
       currentUser = user;
-      localStorage.setItem('momcare_current', JSON.stringify(user));
+      localStorage.setItem('carepulse_current', JSON.stringify(user));
       showApp();
-      toast('Patient Profile Created Successfully');
+      toast('Profile Created Successfully');
     });
 
     function showApp() {
       $('authPage').classList.add('hidden');
       $('app').classList.remove('hidden');
-      $('userName').textContent = currentUser.name || 'Mom';
+      $('userName').textContent = currentUser.name || 'User';
       
-      if (currentUser.dueDate) {
-        const due = new Date(currentUser.dueDate), today = new Date();
-        $('dueDateDisplay').textContent = due.toLocaleDateString('en-IN');
-        const conception = new Date(due);
-        conception.setDate(conception.getDate() - 280);
-        $('pregnancyWeek').textContent = Math.max(0, Math.min(40, Math.floor((today - conception) / 604800000))) + ' Weeks';
+      if (currentUser.dob) {
+        const dob = new Date(currentUser.dob), today = new Date();
+        $('dobDisplay').textContent = dob.toLocaleDateString('en-IN');
+        let age = today.getFullYear() - dob.getFullYear();
+        const m = today.getMonth() - dob.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+            age--;
+        }
+        $('userAge').textContent = Math.max(0, age) + ' Years';
       }
       $('bloodType').textContent = currentUser.bloodType || 'Not set';
       $('allergies').textContent = currentUser.allergies || 'None';
@@ -658,7 +661,7 @@
 
     function logout() {
       currentUser = null;
-      localStorage.removeItem('momcare_current');
+      localStorage.removeItem('carepulse_current');
       $('app').classList.add('hidden');
       $('authPage').classList.remove('hidden');
       showLogin();
@@ -701,7 +704,7 @@
 
     function messageText() {
       const loc = locationData ? `https://www.google.com/maps?q=${locationData.lat},${locationData.lng}` : 'Location unavailable';
-      return `🚨 PREGNANCY EMERGENCY DISPATCH 🚨\nPatient: ${currentUser.name}\nGestation: ${$('pregnancyWeek').textContent}\nBlood Group: ${currentUser.bloodType || 'Not set'}\nAllergies: ${currentUser.allergies || 'None'}\nDoctor: ${currentUser.doctorName || 'Not set'}\nLive GPS: ${loc}\nImmediate medical assistance required.`;
+      return `🚨 PUBLIC EMERGENCY DISPATCH 🚨\nUser: ${currentUser.name}\nAge: ${$('userAge').textContent}\nBlood Group: ${currentUser.bloodType || 'Not set'}\nMedical Notes / Allergies: ${currentUser.allergies || 'None'}\nPhysician: ${currentUser.doctorName || 'Not set'}\nLive GPS: ${loc}\nImmediate emergency medical assistance required.`;
     }
 
     function triggerSOS() {
@@ -712,7 +715,7 @@
         $('alertLocation').textContent = `${locationData.lat.toFixed(5)}, ${locationData.lng.toFixed(5)}`;
       }
       $('alertPatient').textContent = currentUser.name;
-      $('alertMedical').textContent = `${$('pregnancyWeek').textContent} • Blood: ${currentUser.bloodType || 'Not set'} • Allergies: ${currentUser.allergies || 'None'}`;
+      $('alertMedical').textContent = `Age: ${$('userAge').textContent} • Blood: ${currentUser.bloodType || 'Not set'} • Conditions: ${currentUser.allergies || 'None'}`;
       $('sosModal').classList.remove('hidden');
       setTimeout(() => {
         if (locationData) $('alertLocation').textContent = `${locationData.lat.toFixed(5)}, ${locationData.lng.toFixed(5)}`;
@@ -724,13 +727,13 @@
     }
 
     function sendEmergencyMessage() {
-      const phone = currentUser.doctorPhone || currentUser.husbandPhone || currentUser.familyPhone;
+      const phone = currentUser.doctorPhone || currentUser.primaryPhone || currentUser.familyPhone;
       if (phone) window.location.href = `sms:${phone}?body=${encodeURIComponent(messageText())}`;
       else toast('Configure an emergency phone number in profile');
     }
 
     function sendSMS() {
-      const phone = currentUser.husbandPhone || currentUser.familyPhone || currentUser.doctorPhone;
+      const phone = currentUser.primaryPhone || currentUser.familyPhone || currentUser.doctorPhone;
       if (!phone) return toast('Configure an emergency contact phone number');
       window.location.href = `sms:${phone}?body=${encodeURIComponent(messageText())}`;
     }
@@ -747,7 +750,7 @@
 
     function callContact(type) {
       let phone = '';
-      if (type === 'husband') phone = currentUser.husbandPhone;
+      if (type === 'primary') phone = currentUser.primaryPhone;
       if (type === 'family') phone = currentUser.familyPhone;
       if (type === 'doctor') phone = currentUser.doctorPhone;
       if (type === 'ambulance') phone = '102';
@@ -755,7 +758,7 @@
       if (!phone) {
         phone = prompt('Enter emergency phone number:');
         if (phone) {
-          currentUser[type === 'husband' ? 'husbandPhone' : type === 'family' ? 'familyPhone' : 'doctorPhone'] = phone;
+          currentUser[type === 'primary' ? 'primaryPhone' : type === 'family' ? 'familyPhone' : 'doctorPhone'] = phone;
           saveUser();
         }
       }
@@ -764,27 +767,27 @@
 
     function editMedicalInfo() {
       const blood = prompt('Blood group:', currentUser.bloodType || '');
-      const allergy = prompt('Allergies:', currentUser.allergies || 'None');
-      const doctor = prompt('Doctor name:', currentUser.doctorName || '');
-      const dp = prompt('Doctor phone:', currentUser.doctorPhone || '');
-      const hp = prompt('Primary emergency phone:', currentUser.husbandPhone || '');
+      const allergy = prompt('Medical conditions / Allergies:', currentUser.allergies || 'None');
+      const doctor = prompt('Primary physician name:', currentUser.doctorName || '');
+      const dp = prompt('Physician phone:', currentUser.doctorPhone || '');
+      const hp = prompt('Primary emergency contact phone:', currentUser.primaryPhone || '');
       
       if (blood !== null) currentUser.bloodType = blood;
       if (allergy !== null) currentUser.allergies = allergy;
       if (doctor !== null) currentUser.doctorName = doctor;
       if (dp !== null) currentUser.doctorPhone = dp;
-      if (hp !== null) currentUser.husbandPhone = hp;
+      if (hp !== null) currentUser.primaryPhone = hp;
       
       saveUser();
       showApp();
-      toast('Patient Profile Updated');
+      toast('User Profile Updated');
     }
 
     function saveUser() {
       const i = users.findIndex(x => x.username === currentUser.username);
       if (i >= 0) users[i] = currentUser;
-      localStorage.setItem('momcare_users', JSON.stringify(users));
-      localStorage.setItem('momcare_current', JSON.stringify(currentUser));
+      localStorage.setItem('carepulse_users', JSON.stringify(users));
+      localStorage.setItem('carepulse_current', JSON.stringify(currentUser));
     }
 
     function updateTimer() {
