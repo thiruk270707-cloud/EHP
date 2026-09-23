@@ -433,30 +433,7 @@
   <script>
     // Initial dataset loaded from localStorage if existing
     let patientDatabase = JSON.parse(localStorage.getItem('carepulse_patients')) || [
-      {
-        id: "PT-1001",
-        name: "Alex Morgan",
-        username: "alexm",
-        password: "password123",
-        dob: "1998-05-14",
-        blood: "O+",
-        phone: "+1 (555) 019-2834",
-        allergies: "Penicillin Allergy",
-        status: "Offline",
-        isDistress: false
-      },
-      {
-        id: "PT-1002",
-        name: "Sarah Jenkins",
-        username: "sjenkins",
-        password: "password123",
-        dob: "1992-11-20",
-        blood: "A-",
-        phone: "+1 (555) 018-9921",
-        allergies: "Asthma",
-        status: "Offline",
-        isDistress: false
-      }
+      
     ];
 
     let currentRole = 'patient';
@@ -505,48 +482,65 @@
       }
     }
 
-    function handleLogin(e) {
-      e.preventDefault();
-      const uname = document.getElementById('loginUsername').value.trim();
-      const pass = document.getElementById('loginPassword').value;
+function handleLogin(e) {
+  e.preventDefault();
 
-      if (currentRole === 'admin') {
-        // Default Admin login check
-        if (uname.toLowerCase() === 'admin' && pass === 'admin123') {
-          currentSessionUser = { name: "System Administrator", role: "admin" };
-          initApp('admin');
-        } else {
-          alert('Invalid Admin credentials! Use username "admin" and password "admin123".');
-        }
-      } else {
-        // Patient login logic
-        let patient = patientDatabase.find(p => p.username.toLowerCase() === uname.toLowerCase());
-        
-        if (!patient) {
-          // Auto register new patient input to admin database
-          patient = {
-            id: 'PT-' + Math.floor(1000 + Math.random() * 9000),
-            name: uname.charAt(0).toUpperCase() + uname.slice(1),
-            username: uname,
-            password: pass,
-            dob: '1998-05-14',
-            blood: 'O+',
-            phone: '+1 (555) 000-0000',
-            allergies: 'None',
-            status: 'Active Now',
-            isDistress: false
-          };
-          patientDatabase.unshift(patient);
-          savePatientsToStorage();
-        } else {
-          patient.status = 'Active Now';
-          savePatientsToStorage();
-        }
+  const uname = document.getElementById('loginUsername').value.trim();
+  const pass = document.getElementById('loginPassword').value;
 
-        currentSessionUser = patient;
-        initApp('patient');
-      }
+  if (currentRole === 'admin') {
+
+    // Admin login
+    if (uname.toLowerCase() === 'admin' && pass === '123') {
+      currentSessionUser = {
+        name: "System Administrator",
+        role: "admin"
+      };
+
+      initApp('admin');
+
+    } else {
+      alert('Invalid Admin credentials!');
     }
+
+  } else {
+
+    // Patient login
+    const patient = patientDatabase.find(
+      p => p.username.toLowerCase() === uname.toLowerCase()
+    );
+
+    // Username does not exist in Admin Database
+    if (!patient) {
+      alert(
+        'Username not found in Admin Database. Please create a patient account first.'
+      );
+
+      // Open patient registration form
+      document.getElementById('regUsername').value = uname;
+      showRegister();
+
+      return;
+    }
+
+    // Username exists, so check password
+    if (patient.password !== pass) {
+      alert('Incorrect password. Please try again.');
+      return;
+    }
+
+    // Successful login
+    patient.status = 'Active Now';
+    patient.isDistress = false;
+
+    savePatientsToStorage();
+
+    currentSessionUser = patient;
+
+    initApp('patient');
+  }
+}
+
 
     function handleRegister(e) {
       e.preventDefault();
